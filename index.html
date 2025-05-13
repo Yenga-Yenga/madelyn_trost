@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,52 +9,61 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
-<body>
-    <header>
+
+<body class="bg-gray-100">
+    <header class="flex justify-between items-center text-black px-2">
         <p>Madelyn Troff</p>
-        <div>
-            <ul>
+        <div class="flex items-center space-x-4">
+            <ul class="hidden md:flex space-x-4">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Contacts</a></li>
             </ul>
+            <i class="md:hidden bi bi-list text-4xl"></i>
         </div>
     </header>
-    <main>
-        <section>
+    <main class="container mx-auto px-2">
+        <section class="flex flex-col md:flex-row justify-between items-center mt-10 gap-8">
             <div>
-                <h1>About me</h1>
-                <p>Nisl arcu, scelerisque neque ut. Tincidunt amet, tempor
-                   duis tortor neque auctor dis ipsum. Pretium cras amet
-                   odio amet eleifend id sed cras sed. Aliquet risus
-                   posuere aliquet imperdiet sit.</p>
-                <button>Resume</button>
+                <h1 class="text-4xl font-bold">About me</h1>
+                <p class="py-4 text-gray-500">
+                    Nisl arcu, scelerisque neque ut. Tincidunt amet, tempor <br>
+                    duis tortor neque auctor dis ipsum. Pretium cras amet
+                    odio amet eleifend id sed cras sed. Aliquet risus
+                    posuere aliquet imperdiet sit.
+                </p>
+                <button class="bg-yellow-500 text-black py-2 px-4 rounded" type="submit">Resume</button>
             </div>
-            <div>
-                <img src="/bg-2.png" alt="">
+            <div class="py-10">
+                <img src="/bg-2.png" alt="" class="h-auto w-800">
             </div>
         </section>
-        <section>
+        <section class="flex flex-col justify-between items-center mt-10">
+            <h1 class="text-4xl font-bold pb-10 text-center">Projects</h1>
             <div>
-                <h1>Projects</h1>
-                <form>
-                    <input required type="text" placeholder="Name">
-                    <input required type="email" placeholder="Email">
-                    <input required type="text" placeholder="Message">
-                    <button type="submit">Send</button>
+
+                <form action="submit" method="POST" class="flex flex-col space-y-4 pb-4">
+                    <p>Name</p>
+                    <input required type="text" placeholder="">
+                    <p>Email</p>
+                    <input required type="email" placeholder="">
+                    <p>Message</p>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder=""></textarea>
                 </form>
+                <button type="submit" class="bg-yellow-500 text-black py-2 px-4 rounded">Send</button>
             </div>
-            <div>
+            <div class="py-6 text-center gap-8">
                 <i class="bi bi-instagram"></i>
                 <i class="bi bi-linkedin"></i>
-                <i class="bi bi-mail"></i>
-                <p>Madelyn Troff 2023</p>
+                <i class="bi bi-envelope"></i>
             </div>
+            <p class="text-gray-500">Madelyn Troff 2023</p>
         </section>
     </main>
     <footer>
         <img src="/Vector.png" alt="">
     </footer>
-    
+
 </body>
+
 </html>
